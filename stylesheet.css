@@ -1,0 +1,39 @@
+body {
+	display: flex;
+	margin :0;
+	border :0;
+	padding:0;
+	background-color:pink;
+}
+.menu-tab {
+	background-color:red;
+	display:block;
+	width:5vw;
+	height:100vh;
+}
+.information {
+	width:95vw;
+	height:100vh;
+	display:block;
+}
+.top {
+	height:20vh;
+	width:100%;
+	background-color:yellow;
+}
+.bottom {
+	display:flex;
+	height:40vh;
+	width:100%;
+}
+.middle {
+	height:40vh;
+	width:100%;
+	background-color:orange;
+}
+.info-section{
+	width: calc(100%/3);
+	height:100%;
+	background-color:purple;
+}
+.box{}
