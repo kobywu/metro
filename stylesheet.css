@@ -67,6 +67,8 @@ body {
 	height:20vh;
 	width:100%;
 	background-color:white;
+	display:flex;
+	justify-content:center;
 }
 .show {
 	height:40vh;
@@ -77,4 +79,15 @@ body {
 	height:40vh;
 	width:100%;
 	background-color:pink;
+}
+    #str {
+	display:flex;
+	justify-content:center;
+	width: 500px;
+	padding: 20px;
+	font-family: sans-serif;
+	font-size: 50px;
+	margin: 50px auto;
+	color: red;
+	font-weight: bold;
 }

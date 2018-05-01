@@ -25,3 +25,11 @@ function noHighlight2() {
 function noHighlight3() {
 		document.getElementById("link3").classList.remove("highlight");
 }
+
+var string = "Student and Kids";
+var str = string.split("");
+var el = document.getElementById('str');
+(function animate() {
+str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+var running = setTimeout(animate, 120);
+})();
