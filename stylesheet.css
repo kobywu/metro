@@ -91,3 +91,7 @@ body {
 	color: red;
 	font-weight: bold;
 }
+.button-section {
+	display:flex;
+	
+}
