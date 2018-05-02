@@ -7,6 +7,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
 }
+
 function highlight1() {
 	document.getElementById("link1").classList.add("highlight");
 }
@@ -26,6 +27,24 @@ function noHighlight3() {
 		document.getElementById("link3").classList.remove("highlight");
 }
 
+function highlight4() {
+	document.getElementById("link4").classList.add("highlight");
+}
+function highlight5() {
+	document.getElementById("link5").classList.add("highlight");
+}
+function highlight6() {
+	document.getElementById("link6").classList.add("highlight");
+}
+function noHighlight4() {
+	document.getElementById("link4").classList.remove("highlight");
+}
+function noHighlight5() {
+	document.getElementById("link5").classList.remove("highlight");
+}
+function noHighlight6() {
+		document.getElementById("link6").classList.remove("highlight");
+}
 var string = "Student and Kids";
 var str = string.split("");
 var el = document.getElementById('str');
