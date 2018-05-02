@@ -23,10 +23,10 @@
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
     width: 80%;
-}
+	height: 50%;
+	right: 20px;
+	}
 
 /* The Close Button */
 .close {
@@ -34,6 +34,7 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+	margin-right:10px;
 }
 
 .close:hover {
@@ -41,6 +42,13 @@
     text-decoration: none;
     cursor: pointer;
 }
+.button-layout {
+background-color:red;
+display:block;
+height:100%;
+width:100%;
+}
+
 </style>
 </head>
 <body>
@@ -48,17 +56,18 @@
 <h2>Modal Example</h2>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<button id="button1">Open Modal</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
+  <div class="button-layout">
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
   </div>
-
+	</div>
 </div>
 
 <script>
@@ -66,7 +75,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("button1");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
