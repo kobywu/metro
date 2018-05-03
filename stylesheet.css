@@ -174,3 +174,13 @@ button {
 	font-size:24px;
 	text-align:center;
 }
+.slideshow {
+	display:flex;
+	justify-content:center;
+	width:800px;
+	height:100%;
+}
+.images {
+
+	height:100%;
+}
