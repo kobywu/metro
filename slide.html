@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Student & Kid </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<img name="slide" width="400px" height="200px">
+
+<script> 
+var i = 0; //start point
+var images = [];
+var time = 3000; //the time until the screen will change to the next slide
+
+//Image List of the slideshow
+	images[0] ='one.jpeg'; //this is an array that holds the first images
+	images[1] ='2.jpg'; 
+	images[2] ='3.jpeg'; 
+
+//call the images to change
+function slideshow(){
+	document.slide.src = images[i]; //when the function is called by "slideshow" the element with the name "slide" will be called to show the array "images" with the value "i". The "i" starts with the value 0 so the slideshow starts with the first image aka "images[0]"
+
+	if(i < images.length - 1){ //Images.length is how many index values there are (amount of images in the Image List) which is 3 but since it starts at 0, you substract by 1
+		i++; //the index value will increase by 1
+	} 
+	else {
+	i = 0; //when the index value because less than i, then you would reset the i index value to 0
+	}
+	setTimeout("slideshow()", time); //This is how long the image will wait and then change by calling the variable time which is 3000 making it change every 3 seconds
+}
+
+window.onload = slideshow;
+</script>
+</body>
+</html>
+
+
