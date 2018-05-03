@@ -26,7 +26,6 @@ function noHighlight2() {
 function noHighlight3() {
 		document.getElementById("link3").classList.remove("highlight");
 }
-
 function highlight4() {
 	document.getElementById("link4").classList.add("highlight");
 }
@@ -45,7 +44,7 @@ function noHighlight5() {
 function noHighlight6() {
 		document.getElementById("link6").classList.remove("highlight");
 }
-var string = "Student and Kids";
+var string = "Students (K-8 and 9-12)";
 var str = string.split("");
 var el = document.getElementById('str');
 (function animate() {
