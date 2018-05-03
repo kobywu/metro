@@ -65,6 +65,8 @@ body {
 .show {
 	height:40vh;
 	width:100%;
+	display:flex;
+	justify-content:center;
 }
 .content {
 	height:40vh;
