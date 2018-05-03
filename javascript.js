@@ -26,6 +26,7 @@ function noHighlight2() {
 function noHighlight3() {
 		document.getElementById("link3").classList.remove("highlight");
 }
+
 function highlight4() {
 	document.getElementById("link4").classList.add("highlight");
 }
@@ -44,7 +45,7 @@ function noHighlight5() {
 function noHighlight6() {
 		document.getElementById("link6").classList.remove("highlight");
 }
-var string = "Students (K-8 and 9-12)";
+var string = "Student and Kids";
 var str = string.split("");
 var el = document.getElementById('str');
 (function animate() {
@@ -115,3 +116,29 @@ window.onclick = function(event) {
         modal1.style.display = "none";
     }
 }
+
+
+
+var i = 0; //start point
+var images = [];
+var time = 3000; //the time until the screen will change to the next slide
+
+//Image List of the slideshow
+	images[0] ='images/metro1.jpg'; //this is an array that holds the first images
+	images[1] ='images/metro2.jpg'; 
+	images[2] ='logo.gif'; 
+
+//call the images to change
+function slideshow(){
+	document.slide.src = images[i]; //when the function is called by "slideshow" the element with the name "slide" will be called to show the array "images" with the value "i". The "i" starts with the value 0 so the slideshow starts with the first image aka "images[0]"
+
+	if(i < images.length - 1){ //Images.length is how many index values there are (amount of images in the Image List) which is 3 but since it starts at 0, you substract by 1
+		i++; //the index value will increase by 1
+	} 
+	else {
+	i = 0; //when the index value because less than i, then you would reset the i index value to 0
+	}
+	setTimeout("slideshow()", time); //This is how long the image will wait and then change by calling the variable time which is 3000 making it change every 3 seconds
+}
+
+window.onload = slideshow;
