@@ -4,7 +4,7 @@
 <title>Student & Kid </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="images/icon.png" rel="icon" type="image/x-icon"/>
+<link href="images/icon.gif" rel="icon" type="image/x-icon"/>
 <link href="stylesheet.css" type="text/css" rel="stylesheet">
 </head>
 <body>
@@ -37,50 +37,84 @@
 	<div class="content">
 		<div class="button-section">
 			<div class="button-holder">
-				<button id="button1">About the Tap Card</button>
+				<button class="mainb" id="button1">About the Tap Card</button>
 				<div id="myModal1" class="modal">
 				  <div class="modal-content">
 				  <div class="button-layout">
 					<div class="title">About the Tap Card</div>
 					<span class="close1 exit">&times;</span>
-					<div class="column left">
-						<div class="info">"Student (K-8 and 9-12) 30-Day Pass - $24" </div>
-						<div class="info">"Student (K-8 and 9-12) Single One-Way Fare - $1"</div>
-						<div class="info">"Students in grades 9-12 are required to have a valid photo ID or school ID to purchase fare or ride with a Student TAP card. Complete instructions and requirements are included on each application."</div>
+					<div class="column">
+						<div class="info important">"Student (K-8 and 9-12) 30-Day Pass - $24" </div>
+						<div class="info important">"Student (K-8 and 9-12) Single One-Way Fare - $1"</div>						
+						<img class="pictures" src="images/tapcard.png"></img>
 					</div>
-					<div class="column right">
+					<div class="column">
+						<div class="info">"Students in grades 9-12 are required to have a valid photo ID or school ID to purchase fare or ride with a Student TAP card. Complete instructions and requirements are included on each application."</div>
+						<button id="small" class="minibutton" onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)"> APPLY NOW </button>
+						<div class="info"> For additional information about reduced fare programs and other questions call Metro Reduced Fare Office </div>
+						<div class="info important">213.680.0054 </div>
+						<div class="info important">Monday - Friday 8 am to 4 pm</div>
 					</div>
 				  </div>
 				  </div>
 				</div>
 			</div>
 			<div class="button-holder">
-				<button id="button2">Tap Card Application</button>
+				<button class="mainb" id="button2">Tap Card Application</button>
 				<div id="myModal2" class="modal">
 				  <div class="modal-content">
 				  <div class="button-layout">
 					<div class="title">Tap Card Application</div>
 					<span class="close2 exit">&times;</span>
-					<div class="column left">
-						<div class="info">"To obtain a K-12 Student TAP Card, submit a completed application, with required documentation." </div>
+					<div class="column">
+						<div class="info">To obtain a K-12 Student TAP Card,  submit a completed application, with required documentation. </div>
+						<div class="info important">Required Documents (provide one of the following)</div>
+						<ul class="list">
+							<li class="info points"> Current report card; OR </li>
+							<li class="info points"> Current valid school ID; OR</li>
+							<li class="info points"> Class schedule with the total number of units and/or in-classroom hours; OR</li>
+							<li class="info points"> Official letter from school verifying enrollment. </li>
+						</ul>
 					</div>
-					<div class="column right">
+					<div class="column">
+						<div class="info">Create a <a href="https://www.taptogo.net/TAPRegister">Tap account </a>online to submit the application for K-12 Students.</div>
+						<div class="info important">Get application online: </div>
+						<div class="left col">
+							<button class="minibutton" onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://media.metro.net/riding_metro/riders_guide/images/tap_k12_application.pdf');"> English </button>
+							<button class="minibutton"onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/tap_k12_application_sp.pdf');"> Español </button>
+							<button class="minibutton" onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12-Armenian.pdf');">  Հայերէն </button>
+							<button class="minibutton"onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://media.metro.net/cambodian_khmer.gif');">Cambodian </button>
+							<button class="minibutton" onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12_chinese.pdf');"> 中文  </button>
+						</div>
+						<div class="right col">
+							<button class="minibutton"onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12-Japanese.pdf');"> 日本語   </button>
+							<button class="minibutton" onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12-Korean.pdf');">  한국어  </button>
+							<button class="minibutton"onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12-Russian.pdf');">  русский   </button>
+							<button class="minibutton" onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12-Thai.pdf');"> ภาษาไทย </button>
+							<button class="minibutton"onmouseout="regularbutton(this)" onmouseover="hoverbutton(this)" onclick="openInNewTab('https://www.metro.net/media/riding_metro/riders_guide/images/K-12-Vietnamese.pdf');"> Tiếng Việt</button>
+						</div>
 					</div>
 				  </div>
 				  </div>
 				</div>
 			</div>
 			<div class="button-holder">
-				<button id="button3">Helpful Tips</button>
+				<button class="mainb" id="button3">Helpful Tips</button>
 				<div id="myModal3" class="modal">
 				  <div class="modal-content">
 				  <div class="button-layout">
 					<div class="title">Helpful Tips</div>
 					<span class="close3 exit">&times;</span>
-					<div class="column left">
+					<div class="column">
 						<div class="info">"Once you receive your new TAP card in the mail, you have three fare payment options:" </div>
+						<ol>
+							<li class="info points">If you ride <b> every day </b>, load your card with a Student 30-Day Pass ($24) at selected schools or any Metro Pass Sales locations. You’ll get unlimited rides for 30 consecutive days.</li>
+							<li class="info points">If you ride <b>occasionally</b>, load your card with some cash; each time you board and tap, it will deduct a reduced one-way fare of $1 (bus or rail) from your card balance.</li>
+							<li class="info points"><b>If you prefer</b>, just tap your unloaded card on the farebox when you board (bus only) and pay the reduced one-way cash fare of $1.</li>
+						</ol>
 					</div>
-					<div class="column right">
+					<div class="column">
+						
 					</div>
 				  </div>
 				  </div>

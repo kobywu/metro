@@ -1,10 +1,11 @@
 //when the 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("main").style.display = "none";
 }
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+	 document.getElementById("main").style.display = "flex";
     document.getElementById("main").style.marginLeft= "0";
 }
 
@@ -84,8 +85,18 @@ span.onclick = function() {
     modal2.style.display = "none";
 }
 
-
-
+//Button on About The Tape Card Pop Up
+var modal = document.getElementById('myModal2');
+var small = document.getElementById("small");
+var span = document.getElementsByClassName("close2")[0];
+var popup = document.getElementById('myModal1');
+small.onclick = function() {
+    modal.style.display = "block";
+	popup.style.display = "none";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
 // Get the modal
 var modal3 = document.getElementById('myModal3');
@@ -126,7 +137,8 @@ var time = 3000; //the time until the screen will change to the next slide
 //Image List of the slideshow
 	images[0] ='images/metro1.jpg'; //this is an array that holds the first images
 	images[1] ='images/metro2.jpg'; 
-	images[2] ='logo.gif'; 
+	images[2] ='images/metro3.jpg'; 
+	images[3] ='images/metro4.png';
 
 //call the images to change
 function slideshow(){
@@ -140,5 +152,22 @@ function slideshow(){
 	}
 	setTimeout("slideshow()", time); //This is how long the image will wait and then change by calling the variable time which is 3000 making it change every 3 seconds
 }
-
 window.onload = slideshow;
+
+
+function regularbutton(x) {
+	x.style.height = "50px";
+    x.style.width = "100px";
+	x.style.opacity = "1";
+}
+function hoverbutton(x) {
+	x.style.height = "70px";
+    x.style.width = "120px";
+	x.style.opacity = "0.4";
+}
+
+
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}

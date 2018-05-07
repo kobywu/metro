@@ -7,7 +7,7 @@ body {
 .menu-pic {
 	width:50px;
 	height: 100vh;
-	background-color:yellow;
+	background-color:black;
 }
 
 .menu{
@@ -15,7 +15,7 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	width:300px;
+	width:250px;
 	height:100vh;
 	display:flex;
 }
@@ -55,6 +55,8 @@ body {
 	width:100vw;
 	height:100vh;
 	display:block;
+	background-image: url('images/background.jpg');
+    background-size: cover;
 }
 .heading {
 	height:20vh;
@@ -77,9 +79,11 @@ body {
 	justify-content:center;
 	width: 700px;
 	padding: 20px;
-	font-family: sans-serif;
+	font-family: Courier New;
 	font-size: 50px;
 	font-weight: bold;
+	color:#2461AA;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .button-section {
 	display:flex;
@@ -91,7 +95,6 @@ body {
 	height:100%;
 	display: flex;
 	justify-content:center;
-	vertical-align:center;
 }
 
 
@@ -115,7 +118,7 @@ body {
     background-color: #fefefe;
     margin: auto;
     width: 80%;
-	height: 50%;
+	height: 60%;
 	right: 20px;
 	}
 
@@ -143,12 +146,40 @@ flex-wrap:wrap;
 height:100%;
 width:100%;
 }
-button {
+.mainb {
 	width:50%;
 	height:60%;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	border: 2px solid #50C8E8;
+  background-color: black;
+  color: ghostwhite;
+  overflow: hidden;
+  font-size:20px;
+  font-family: Courier New;
+}
+.mainb:hover {
+  color: #50C8E8;
+  transition: color 0.5s ease;
+}
+
+.mainb:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  transform-origin: top;
+  background: ghostwhite;
+  z-index: -1;
+  transition: height 0.5s ease;
+}
+
+.mainb:hover::after {
+  height: 100%;
+  color: #50C8E8;
 }
 .metrologo{
 	width:200px;
@@ -163,18 +194,17 @@ button {
 	text-align:center;
 }
 .column {
-	width:50%;
-	height: calc(100% - 69px);
-}
-.left {
-	background-color:orange;
-}
-.right{
-	background-color:green;
+	width:calc(100% / 2 - 10px);
+	height: calc(100% - 79px);
+	text-align:center;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	border:5px solid transparent;
 }
 .info{
 	font-size:24px;
-	text-align:center;
+	width:100%;
 }
 .slideshow {
 	display:flex;
@@ -183,6 +213,34 @@ button {
 	height:100%;
 }
 .images {
-
 	height:100%;
+}
+.pictures {
+	height:200px;
+	width:100%;
+}
+.minibutton {
+	width: 100px;
+	height: 50px;
+	background-color:#214cce;
+	font-family: Courier New;
+	color:white;
+	border-radius: 12px;
+	border: 3px solid #f2f2f2;
+}
+.important{
+	font-weight:bold;
+}
+.col {
+	width:50%;
+}
+.points {
+	text-align:left;
+	font-size:20px;
+}
+.list {
+	list-style-type: square;
+}
+a {
+	text-decoration:none;
 }
