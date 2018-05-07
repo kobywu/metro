@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Student & Kid </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="images/icon.gif" rel="icon" type="image/x-icon"/>
+
+</head>
+<style>
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	display:flex;
+}
+.menu-pic {
+	width:50px;
+	height: 100vh;
+	background-color:black;
+}
+
+.menu{
+	position:fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width:250px;
+	height:100vh;
+	display:flex;
+	background-color:orange;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+}
+.font-color {
+	color:white;
+}
+
+.highlight {
+    color: #0072BC;
+	background-color:white;
+	}
+#main {
+    transition: margin-left .5s;
+	width:300px;
+}
+.menupopup{
+	background-color:red;
+	position:absolute;
+	z-index: 1000;
+	top:0;
+	left:250px;
+	width:400px;
+	height:100vh;
+	display:none;
+}
+ .showing {
+ display:flex;
+ }
+</style>
+<body>
+<div class="menu" onmouseover="openNav()"onmouseout="closeNav()">
+	<div id="mySidenav" class="sidenav">
+	  <img class="metrologo" src="images/logo.png"></img>
+	  <a href="#" id="link1" class="font-color" onmouseover="highlight1(); show()" onmouseout="noHighlight1()" >Going Metro</a>
+	</div>
+</div>
+</div>
+<div class="menupopup" id="goingM" onmouseout="hide(); closeNav()" onmouseover="openNav()"></div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.display = "none";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("main").style.display = "flex";
+    document.getElementById("main").style.marginLeft= "0";
+}
+
+function highlight1() {
+	document.getElementById("link1").classList.add("highlight");
+	
+}
+function noHighlight1() {
+	document.getElementById("link1").classList.remove("highlight");
+}
+function hide() {
+document.getElementById("goingM").classList.remove("showing");
+}
+function show(){
+ document.getElementById("goingM").classList.add("showing");
+ }
+</script>
+</body>
+</html>

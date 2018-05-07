@@ -5,7 +5,7 @@ function openNav() {
 }
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-	 document.getElementById("main").style.display = "flex";
+	document.getElementById("main").style.display = "flex";
     document.getElementById("main").style.marginLeft= "0";
 }
 
@@ -25,7 +25,7 @@ function noHighlight2() {
 	document.getElementById("link2").classList.remove("highlight");
 }
 function noHighlight3() {
-		document.getElementById("link3").classList.remove("highlight");
+	document.getElementById("link3").classList.remove("highlight");
 }
 
 function highlight4() {
