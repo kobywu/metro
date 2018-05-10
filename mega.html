@@ -1,114 +1,193 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Student & Kid </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="images/icon.gif" rel="icon" type="image/x-icon"/>
-
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-	margin:0;
-	padding:0;
-	border:0;
+    margin: 0;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+	width:100%;
+	height:50px;
 	display:flex;
+	justify-content:center;
 }
-.menu-pic {
-	width:50px;
-	height: 100vh;
-	background-color:black;
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin-left:20px;
+	margin-right:20px;
 }
-
-.menu{
-	position:fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width:250px;
-	height:100vh;
-	display:flex;
-	background-color:orange;
+ .dropdown:hover .dropbtn {
+    background-color: red;
 }
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
     left: 0;
-    background-color: #000000;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
+.header {
+    background: red;
+    padding: 16px;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
     display: block;
-    transition: 0.3s;
-}
-.font-color {
-	color:white;
 }
 
-.highlight {
-    color: #0072BC;
-	background-color:white;
-	}
-#main {
-    transition: margin-left .5s;
-	width:300px;
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: calc(100% / 3);
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
 }
-.menupopup{
-	background-color:red;
-	position:absolute;
-	z-index: 1000;
-	top:0;
-	left:250px;
-	width:400px;
-	height:100vh;
-	display:none;
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
- .showing {
- display:flex;
- }
+
+.column a:hover {
+    background-color: #ddd;
+}
 </style>
+</head>
 <body>
-<div class="menu" onmouseover="openNav()"onmouseout="closeNav()">
-	<div id="mySidenav" class="sidenav">
-	  <img class="metrologo" src="images/logo.png"></img>
-	  <a href="#" id="link1" class="font-color" onmouseover="highlight1(); show()" onmouseout="noHighlight1()" >Going Metro</a>
-	</div>
-</div>
-</div>
-<div class="menupopup" id="goingM" onmouseout="hide(); closeNav()" onmouseover="openNav()"></div>
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.display = "none";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-	document.getElementById("main").style.display = "flex";
-    document.getElementById("main").style.marginLeft= "0";
-}
 
-function highlight1() {
-	document.getElementById("link1").classList.add("highlight");
-	
-}
-function noHighlight1() {
-	document.getElementById("link1").classList.remove("highlight");
-}
-function hide() {
-document.getElementById("goingM").classList.remove("showing");
-}
-function show(){
- document.getElementById("goingM").classList.add("showing");
- }
-</script>
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Going Metro</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+   <div class="dropdown">
+    <button class="dropbtn">Dropdown </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Projects</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+   <div class="dropdown">
+    <button class="dropbtn">Dropdown </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>About</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+   <div class="dropdown">
+    <button class="dropbtn">Dropdown </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Translate</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>Category 1</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 2</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>Category 3</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
 </body>
 </html>
