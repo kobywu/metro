@@ -1,0 +1,50 @@
+<style>
+body {
+  margin-top: 80px;
+  background: gainsboro;
+}
+.container {
+  margin: auto;
+  width: 80%;
+  background-color: transparent;
+}
+
+.path {
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 80px;
+  background-color: #c1c1c1;
+  margin: auto;
+}
+.shape {
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 80px;
+  height: 80px;
+  display: block;
+	top: 0;
+  
+  x-transition: all 4s ease-in-out;
+  animation: ani 10s infinite;
+}
+
+
+@keyframes ani {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 720px;
+  }
+  100% {
+    left: 0;
+  }
+}
+</style>
+<div class="container">
+ <div class="path">
+    <span id="elem" class="shape trail"></span> 
+  </div>
+</div>
