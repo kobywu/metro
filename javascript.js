@@ -78,7 +78,7 @@ var time = 3000; //the time until the screen will change to the next slide
 	images[0] ='images/metro1.jpg'; //this is an array that holds the first images
 	images[1] ='images/metro2.jpg'; 
 	images[2] ='images/metro3.jpg'; 
-	images[3] ='images/metro4.png';
+	images[3] ='images/metro4.PNG';
 //call the images to change
 function slideshow(){
 	document.slide.src = images[i]; //when the function is called by "slideshow" the element with the name "slide" will be called to show the array "images" with the value "i". The "i" starts with the value 0 so the slideshow starts with the first image aka "images[0]"
