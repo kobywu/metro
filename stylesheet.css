@@ -15,7 +15,7 @@ body {
     background-size: cover;
 }
 .heading {
-	height:calc(20vh - 60px);
+	height:10vh;
 	width:100%;
 	display:flex;
 	justify-content:center;
@@ -34,7 +34,7 @@ body {
 	display:flex;
 	justify-content:center;
 	width: 700px;
-	padding: 20px;
+	padding: 10px;
 	font-family: Courier New;
 	font-size: 45px;
 	font-weight: bold;
@@ -52,8 +52,6 @@ body {
 	display: flex;
 	justify-content:center;
 }
-
-
 /* The Modal (background) */
 .modal {
     display: none; 
@@ -76,20 +74,18 @@ body {
     width: 80%;
 	right: 20px;
 	}
-
 /* The Close Button */
 .exit {
     color: #aaaaaa;
     float: right;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: bold;
 	margin-right:10px;
 	-webkit-transition: -webkit-transform .5s ease-in-out;
-    transition:         transform .5s ease-in-out;
+    transition:transform .5s ease-in-out;
 }
-
 .exit:hover {
-    color: pink;
+    color: #0089C5;
     text-decoration: none;
     cursor: pointer;
 	-webkit-transform: rotate(180deg);
@@ -107,18 +103,18 @@ width:100%;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	border: 2px solid #50C8E8;
-  background-color: black;
-  color: ghostwhite;
-  overflow: hidden;
-  font-size:20px;
-  font-family: Courier New;
+	border: 2px solid #0089C5;
+	background-color: black;
+	font-weight:bold;
+	color: ghostwhite;
+	overflow: hidden;
+	font-size:20px;
+	font-family: Courier New;
 }
 .mainb:hover {
-  color: #50C8E8;
+  color: #0089C5;
   transition: color 0.5s ease;
 }
-
 .mainb:after {
   content: "";
   position: absolute;
@@ -131,7 +127,6 @@ width:100%;
   z-index: -1;
   transition: height 0.5s ease;
 }
-
 .mainb:hover::after {
   height: 100%;
   color: #50C8E8;
@@ -141,10 +136,9 @@ width:100%;
 	height:100px;
 	padding-bottom: 40px;
 }
-
 .title{
 	font-size:50px;
-	width:calc(100% - 45px);
+	width:calc(100% - 70px);
 	height:69px;
 	text-align:center;
 }
@@ -198,6 +192,7 @@ width:100%;
 }
 a {
 	text-decoration:none;
+	font-size:14px;
 }
 .menupopup{
 	background-color:white;
@@ -209,13 +204,12 @@ a {
 	height:100vh;
 	display:none;
 }
- 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
 	width:100%;
-	height:60px;
+	height:10vh;
 	display:flex;
 }
 .dropdown .dropbtn {
@@ -228,7 +222,7 @@ a {
 	background-color:inherit;
 }
  .dropdown:hover .dropbtn {
-    background-color: #FC1711;
+    background-color:#0089C5;
 }
 .dropdown-content {
     display: none;
@@ -247,7 +241,6 @@ a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* Create three equal columns that floats next to each other */
 .columnnav {
     float: left;
     width: calc(100% / 7);
@@ -276,17 +269,11 @@ a {
 	width:130px;
 	height:100%;
 }
-a {
-	font-size: 14px;
-}
-
 .headimg{
 height:50px;
 width:100%;
 display:flex;
 }
-
-
 .mainimg {
   position: relative;
   height: 45px;
@@ -294,7 +281,7 @@ display:flex;
   margin: 10px 7px;
   padding: 5px 5px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 2px;
   color: #383736;
   border: 2px #383736 solid;
@@ -322,7 +309,7 @@ display:flex;
 .mainimg:after {
   content: "";
   position: absolute;
-  background: #d19b26;
+  background: #0089C5;
   bottom: 0;
   left: 0;
   right: 0;
@@ -332,7 +319,7 @@ display:flex;
 }
 .mainimg:hover{
   color:white;
-  border: 0px #d19b26 solid;
+  border: 0px #0089C5 solid;
 }
 .mainimg:hover:before {
   opacity: .8;
@@ -341,15 +328,15 @@ display:flex;
   top: 0;
 }
 .trans{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
 }
 .web {
-width: 50%;
+	width: 50%;
 }
 .language {
-width:120px;
-height:40px;
-margin: 3px ;
+	width:120px;
+	height:40px;
+	margin: 3px ;
 }
