@@ -4,9 +4,6 @@ function hover(element) {
 function nohover(element){
 	 element.classList.remove("hover");
 }
-function bhover(element) {
-	 element.classList.add("bhover");
-}
 
 //These are the questions that are going to be asked
 var questions =[{
@@ -93,7 +90,7 @@ var opt3 = document.getElementById('opt3');
 var opt4 = document.getElementById('opt4');
 var nextButon = document.getElementById('nextbutton');
 var resultCont = document.getElementById('result');
-
+var redo = document.getElementById('redo');
 //
 function loadQuestion (questionIndex) {
 	var q = questions[questionIndex];
@@ -123,11 +120,15 @@ function loadNext() {
 	if(currentQuestion == totQuestions){
 		container.style.display = 'none';
 		resultCont.style.display ='';
-		resultCont.textContent = 'Your Score' + score;
+		resultCont.textContent = 'Your Score: ' + score;
 		return;
 	}
 	loadQuestion(currentQuestion);
 }
+
+function refreshPage(){
+    window.location.reload();
+} 
 //This is where the code is actually called to load and display the questions
 loadQuestion(currentQuestion);
 

@@ -1,10 +1,11 @@
 body {
 	background-image: url('images/idk.jpg');
     background-size: cover;
+	margin:0;
 }
 .container{
 	height:300px;
-	width:1000px;;
+	width:1000px;
 	position:absolute;
 	top:30%;
 	left:50%;
@@ -38,10 +39,6 @@ body {
 	color:black;
 	border-radius:20px;
 }
-.hover{
-	background: black;
-	color:white;
-}
 
 .next-btn{
 	background:#0089C5;
@@ -50,6 +47,11 @@ body {
 	height:35px;
 	border-radius: 20px;
 	margin:10px;
+	text-align:center;
+}
+.hover{
+	background: black;
+	color:white;
 }
 
 .result {
@@ -60,4 +62,16 @@ body {
 .option input:checked .option{
 	background: yellow;
 	color:red;
+}
+.start {
+	width:100%;
+	display:flex;
+	justify-content:center;
+	position:absolute;
+    top:60%;
+    margin:auto;
+}
+.redo {
+	height:50px;
+	width:150px;
 }
