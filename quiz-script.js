@@ -1,6 +1,8 @@
+//this will be on the button/options on the quiz. When the user hovers over these, this function will add this class to change the color
 function hover(element) {
 	 element.classList.add("hover");
 }
+//this will be on the button/options on the quiz. When the user doesnt hovers over these, this function will remove this class to change back the color
 function nohover(element){
 	 element.classList.remove("hover");
 }
@@ -78,7 +80,7 @@ var questions =[{
 	"answer":"2"
 },
 ]
-//These variables will start at these values
+//These variables will start at these values 
 var currentQuestion =0;
 var score = 0;
 var totQuestions = questions.length;
@@ -91,45 +93,46 @@ var opt4 = document.getElementById('opt4');
 var nextButon = document.getElementById('nextbutton');
 var resultCont = document.getElementById('result');
 var redo = document.getElementById('redo');
-//
+
+//this function will be shown when the page loads when it gets called at the way bottom
 function loadQuestion (questionIndex) {
 	var q = questions[questionIndex];
-	questionEl.textContent =(questionIndex + 1) + '.' + q.question;
-	opt1.textContent = q.option1;
+	questionEl.textContent =(questionIndex + 1) + '.' + q.question; //This will start with the first question by the question index starting at 0. Then it will keep adding 1 for the next question
+	opt1.textContent = q.option1; //these options that are stated at the question variable will be displayed for the question that they go with
 	opt2.textContent = q.option2;
 	opt3.textContent = q.option3;
 	opt4.textContent = q.option4;
 };
 
-//
+//This function will load the next question when you click on the next button
 function loadNext() {
-	var selectedOption = document.querySelector('input[type=radio]:checked');
+	var selectedOption = document.querySelector('input[type=radio]:checked'); //this will check if the user clicked on one of the options
 	if(!selectedOption){
-		alert('Please select your answer!');
-		return;
+		alert('Please select your answer!'); //If the user did not click on one of the options, have a screen pop up and say something
+		return; //these words will be shown
 	}
-	var answer = selectedOption.value;
-	if(questions[currentQuestion].answer == answer){ 
+	var answer = selectedOption.value; 
+	if(questions[currentQuestion].answer == answer){ //if the selected option was actually the correct answer, then the score value will add 1
 		score += 1;
 	}
-	selectedOption.checked = false;
-	currentQuestion++;
-	if(currentQuestion == totQuestions - 1){ 
-		nextButton.textContent ='Finish';
+	selectedOption.checked = false; 
+	currentQuestion++; //then the currentQuestion variable that is displayed will add one to the next
+	if(currentQuestion == totQuestions - 1){  //when the currect question number value is 1 less than the total number of questions then it will state "finished " on the next button istead. It is 1 less because the value the variable starts with is 0
+		nextButton.textContent ='Finish'; //The next button will no longer say "next question" by "finish"
 	}
-	if(currentQuestion == totQuestions){
-		container.style.display = 'none';
-		resultCont.style.display ='';
-		resultCont.textContent = 'Your Score: ' + score;
-		return;
+	if(currentQuestion == totQuestions){ //when the currectquestion equals the total amount of questions, which is when the user clicks on the finish button, this will happen
+		container.style.display = 'none'; //Thecontainer that holds the quiz question and options will no longer appear with the display value at none
+		resultCont.style.display =''; //then the end score container will change the display value from none to nothing which will show the container
+		resultCont.textContent = 'Your Score: ' + score; // the score will then be displayed with the words "your score"
+		return; //then those words will be shown
 	}
-	loadQuestion(currentQuestion);
+	loadQuestion(currentQuestion); //this function will be called when this function is called by the user clicking on the HTML button that has the loadNext function on click
 }
 
-function refreshPage(){
+function refreshPage(){ //When the user clicks on the HTML refresh button, the website will refresh and then the user can restart the quiz
     window.location.reload();
 } 
-//This is where the code is actually called to load and display the questions
+//This is where the code is actually called to load and display the questions.
 loadQuestion(currentQuestion);
 
 
