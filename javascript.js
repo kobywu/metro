@@ -1,10 +1,10 @@
-//When the window is loaded, the title will be typed out
+//When the page is loaded, the title will be typed out
 var string = "Student and Kids"; //this is the phrase that will be typed
 var str = string.split("");
 var el = document.getElementById('str');
 (function animate() {
 str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
-var running = setTimeout(animate, 200); //the 200 is the time limit for each letter to come out
+var running = setTimeout(animate, 200); //the 200 in miliseconds is the time limit for each letter to come out
 })();
 
 //Popup 1 (modal)
@@ -15,7 +15,7 @@ var span = document.getElementsByClassName("close1")[0]; //this is the close but
 btn1.onclick = function() {
     modal1.style.display = "block";
 }
-// When the user clicks on <span> (x), close the modal by the display being none
+// When the user clicks on the span elements, the modal's display value will be none making it not show anymore
 span.onclick = function() {
     modal1.style.display = "none";
 }
@@ -45,7 +45,7 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-// Popup 3
+// Popup 3 (modal)
 var modal3 = document.getElementById('myModal3');
 var btn3 = document.getElementById("button3");
 var span = document.getElementsByClassName("close3")[0];
@@ -58,7 +58,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, the modal (pop up) will close
 window.onclick = function(event) {
-    if (event.target == modal3) {
+    if (event.target == modal3) { //this is for the first modal
         modal3.style.display = "none";
     }
 	 if (event.target == modal2) {
