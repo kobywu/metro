@@ -15,7 +15,7 @@ var span = document.getElementsByClassName("close1")[0]; //this is the close but
 btn1.onclick = function() {
     modal1.style.display = "block";
 }
-// When the user clicks on the span elements, the modal's display value will be none making it not show anymore
+// When the user clicks on the span elements which is the x picture, the modal's display value will be none making it not show anymore
 span.onclick = function() {
     modal1.style.display = "none";
 }
