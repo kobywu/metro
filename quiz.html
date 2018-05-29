@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Student & Kid </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="images/icon.gif" rel="icon" type="image/x-icon"/>
+<link href="quiz.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="quizContainer" class="container">
+		<div class="title"> Metro Quiz </div>
+		<div id="question" class="question"></div>
+		<label class="option" onmouseover="hover(this)" onmouseout="nohover(this)"  ><input type="radio" onchange="cbChange(this)" name "option" class="cb" value ="1"/> <span id="opt1"></span></label>
+		<label class="option" onmouseover="hover(this)" onmouseout="nohover(this)"><input type="radio" onchange="cbChange(this)" name "option" class="cb" value ="2"/> <span id="opt2"></span></label>
+		<label class="option"onmouseover="hover(this)" onmouseout="nohover(this)"><input type="radio" onchange="cbChange(this)" name "option" class="cb" value ="3"/> <span id="opt3"></span></label>
+		<label class="option"onmouseover="hover(this)" onmouseout="nohover(this)"><input type="radio" onchange="cbChange(this)" name "option" class="cb" value ="4"/> <span id="opt4"></span></label>
+		<button id="nextButton" class="next-btn" onclick="loadNext()" onmouseover="hover(this)" onmouseout="nohover(this)"> Next Question </button>
+	</div>
+	<div class="container result" id="result"  style ="display:none;"></div>
+	<div class="start">
+	<button type="submit" class="next-btn redo" onmouseover="hover(this)" onmouseout="nohover(this)" onClick="refreshPage()" id="redo">Restart</button>
+	</div>
+	<script src="quiz-script.js"></script>
+</body>
+</html>
