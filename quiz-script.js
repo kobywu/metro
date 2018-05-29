@@ -61,7 +61,7 @@ var questions =[{
 	"question": "What languages are not translated in the applications?",
 	"option1":"English",
 	"option2":"French",
-	"option3":"Hindi",
+	"option3":"Hindu",
 	"option4":"Hmong",
 	"answer":"3"
 },{
@@ -132,13 +132,15 @@ function loadNext() {
 function refreshPage(){ //When the user clicks on the HTML refresh button, the website will refresh and then the user can restart the quiz
     window.location.reload();
 } 
+
 //This is where the code is actually called to load and display the questions.
 loadQuestion(currentQuestion);
 
+//This is where the buttons can be unchecked if the user clicks a button right after they clicked another button
 function cbChange(obj) {
     var cbs = document.getElementsByClassName("cb");
     for (var i = 0; i < cbs.length; i++) {
-        cbs[i].checked = false;
+        cbs[i].checked = false; //If the the button was already checked, that value now changes so that it won't show anymore because it says false
     }
-    obj.checked = true;
+    obj.checked = true; //this is to get the button checked that was just clicked
 }
