@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+        box-sizing: border-box;
 }
 body {
 	margin:0;
@@ -9,7 +9,7 @@ body {
 	height:100vh;
 	display:block;
 	background-image: url('images/idk.jpg');
-    background-size: cover;
+        background-size: cover;
 }
 .heading {
 	height:10vh;
@@ -51,40 +51,40 @@ body {
 }
 /* The Modal (background) */
 .modal {
-    display: none; 
-    position: fixed; /* this will make the modal stay in place */
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); /* Black with the opacity */
+        display: none; 
+        position: fixed; /* this will make the modal stay in place */
+	z-index: 1;
+	padding-top: 100px;
+        left: 0;
+	top: 0;
+	width: 100%; 
+        height: 100%;
+	overflow: auto; 
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4); /* Black with the opacity */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    width: 80%;
-	right: 20px;
+       background-color: #fefefe;
+       margin: auto;
+       width: 80%;
+       right: 20px;
 	}
 /*this is where the exit button is styled*/
 .exit {
-    color: #aaaaaa;
-    float: right;
-    font-size: 70px;
-    font-weight: bold;
-	margin-right:10px;
-	-webkit-transition: -webkit-transform .5s ease-in-out;
-    transition:transform .5s ease-in-out;
+      color: #aaaaaa;
+      float: right;
+      font-size: 70px;
+      font-weight: bold;
+      margin-right:10px;
+     -webkit-transition: -webkit-transform .5s ease-in-out;
+      transition:transform .5s ease-in-out;
 }
 .exit:hover {
-    color: #0089C5;
+     color: #0089C5;
     text-decoration: none;
     cursor: pointer;
-	-webkit-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 .button-layout {
@@ -109,8 +109,8 @@ body {
 	font-family: Courier New;
 }
 .mainb:hover {
-    color: #0089C5;
-    transition: color 0.5s ease;
+       color: #0089C5;
+       transition: color 0.5s ease;
 }
 .mainb:after {
 	content: "";
@@ -125,8 +125,8 @@ body {
 	transition: height 0.5s ease;
 }
 .mainb:hover::after {
-  height: 100%;
-  color: #50C8E8;
+       height: 100%;
+       color: #50C8E8;
 }
 .metrologo{
 	width:200px;
@@ -202,25 +202,25 @@ a {
 	display:none;
 }
 .navbar {
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+       overflow: hidden;
+       font-family: Arial, Helvetica, sans-serif;
 	width:100%;
 	height:10vh;
 	display:flex;
 }
 .dropdown .dropbtn {
-    font-size: 25px;    
-    border: none;
-    outline: none;
-    color: white;
-	font-weight:bold;
-    padding: 12px 16px;
-	height:100%;
-	font-family:Times;
-	background-color: inherit;
+       font-size: 25px;    
+       border: none;
+       outline: none;
+       color: white;
+       font-weight:bold;
+       padding: 12px 16px;
+       height:100%;
+       font-family:Times;
+       background-color: inherit;
 }
  .dropdown:hover .dropbtn {
-    background-color:#0089C5;
+      background-color:#0089C5;
 }
 .dropdown-content {
     display: none;
@@ -231,9 +231,9 @@ a {
     z-index: 1;
 }
 .header {
-	background-color:#ccc;
+    background-color:#ccc;
     padding: 5px;
-	font-size:20px;
+    font-size:20px;
     color: white;
 }
 .dropdown:hover .dropdown-content {
@@ -316,14 +316,14 @@ a {
   -webkit-transition: all 150ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
 }
 .mainimg:hover{
-  color:white;
-  border: 0px #0089C5 solid;
+ 	 color:white;
+  	border: 0px #0089C5 solid;
 }
 .mainimg:hover:before {
-  opacity: .8;
+  	opacity: .8;
 }
 .mainimg:hover:after {
-  top: 0;
+  	top: 0;
 }
 .trans{
 	display:flex;
